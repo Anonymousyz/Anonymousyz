@@ -2,6 +2,12 @@
 
 ## Applied AI deployment and governance portfolio
 
+<p align="center">
+  <img src="assets/portfolio-map.svg" alt="Anonymousyz portfolio: discover tools, test AI workflow readiness, prepare a human decision" width="100%">
+</p>
+
+**Start with the problem you have:** [find tools and standards](https://github.com/Anonymousyz/awesome-ai-production-readiness), [review an AI workflow](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit), or [turn evidence into a decision packet](https://github.com/Anonymousyz/research-to-decision-toolkit).
+
 This profile contains practical methods and local tools for a specific operational question:
 
 > An AI prototype works in a demonstration. What evidence, controls, and decision rights are required before it is allowed to affect a real workflow?
