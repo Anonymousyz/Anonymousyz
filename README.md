@@ -61,9 +61,9 @@ For a detailed file-by-file review path, start with the flagship repository's [p
 
 | Repository | Current public release | What the release makes explicit |
 |---|---|---|
-| Prototype-to-Production | [v0.5.0](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit/releases/tag/v0.5.0) | Canonical 70-point contract, evidence/reviewer/date declarations, veto handling, and migration boundary |
-| Awesome AI Production Readiness | [v0.3.1](https://github.com/Anonymousyz/awesome-ai-production-readiness/releases/tag/v0.3.1) | Catalog integrity, archived-resource policy, production workflow path, and link-verification result |
-| Research-to-Decision | [v0.5.0](https://github.com/Anonymousyz/research-to-decision-toolkit/releases/tag/v0.5.0) | Human decision-packet contract, decision-review area, typed source declarations, and migration boundary |
+| Prototype-to-Production | [v0.5.2](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit/releases/tag/v0.5.2) | Canonical 70-point contract, evidence/reviewer/date declarations, veto handling, and citation metadata |
+| Awesome AI Production Readiness | [v0.3.3](https://github.com/Anonymousyz/awesome-ai-production-readiness/releases/tag/v0.3.3) | Catalog integrity, archived-resource policy, production workflow path, link verification, and contributor safety guidance |
+| Research-to-Decision | [v0.5.2](https://github.com/Anonymousyz/research-to-decision-toolkit/releases/tag/v0.5.2) | Human decision-packet contract, typed source declarations, decision-review area, and citation metadata |
 
 Each release documents a local verification command. Public examples are fictional or use public sources; a successful test run confirms code and declared structure, not a real-world outcome.
 
