@@ -1,68 +1,89 @@
 # Anonymousyz
 
-I build practical tools for a narrow but consequential question:
+## Applied AI deployment and governance portfolio
 
-> A demo works. What evidence is needed before it changes a real workflow?
+This profile contains practical methods and local tools for a specific operational question:
 
-The public work here focuses on AI deployment, AI governance, and evidence-backed decision design. The common thread is straightforward: translate an AI capability into a workflow, define the data boundary, test the output, assign control and ownership, then leave the final decision with accountable people.
+> An AI prototype works in a demonstration. What evidence, controls, and decision rights are required before it is allowed to affect a real workflow?
 
-## Start here
+The work is aimed at the point where product design, engineering, risk, compliance, and operating ownership meet. In a real organization, model quality is only one input to that conversation. The decision also depends on the workflow being changed, authorized data, evaluation evidence, human override design, auditability, cost, incident ownership, and rollback.
 
-| If you need to... | Repository | What you can inspect |
-|---|---|---|
-| Decide whether an AI prototype has enough evidence for a controlled pilot | [AI Prototype-to-Production Toolkit](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit) | Fixed 70-point CLI, eight veto conditions, JSON schema, fictional cases, reports, and unit tests |
-| Find tools for evaluation, observability, guardrails, governance, and deployment | [Awesome AI Production Readiness](https://github.com/Anonymousyz/awesome-ai-production-readiness) | Curated 57-resource catalog, duplicate checks, archived-resource handling, link checker, and curation policy |
-| Turn research into a packet for a human decision meeting | [Research-to-Decision Toolkit](https://github.com/Anonymousyz/research-to-decision-toolkit) | Fixed 24-point structural check, decision-review module, fictional decision packet, CLI, and tests |
+The repositories use a pseudonymous public handle. They publish methods, fictional cases, public sources, schemas, and executable local tools while deliberately excluding client, employer, personal, and confidential operational material.
+
+## Portfolio architecture
+
+| Operating question | Public repository | Primary deliverables | Typical reviewer |
+|---|---|---|---|
+| Is an AI prototype structurally prepared for a bounded pilot or production decision? | [AI Prototype-to-Production Toolkit](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit) | Fixed 70-point local CLI, eight veto conditions, JSON schema, readiness checklist, system card, risk register, evaluation plan, pilot memo, and fictional cases | Product owner, FDE, solutions architect, security or risk lead |
+| Which tools and standards can close a known gap in evaluation, observability, guardrails, governance, or deployment? | [Awesome AI Production Readiness](https://github.com/Anonymousyz/awesome-ai-production-readiness) | Curated 57-resource catalog, curation rules, archived-resource handling, duplicate detection, and link verification | Architect, AI platform lead, governance practitioner, technical researcher |
+| How should readiness and research evidence become a decision packet for accountable humans? | [Research-to-Decision Toolkit](https://github.com/Anonymousyz/research-to-decision-toolkit) | Fixed 24-point structural check, decision-review module, evidence matrix, alternatives, pre-mortem, CLI, and fictional decision packet | Consultant, policy analyst, product leader, governance or investment committee member |
 
 ```mermaid
 flowchart LR
-    A[AI capability or research question] --> B[Discover relevant tools and standards]
-    B --> C[Collect readiness evidence and controls]
-    C --> D[Build a decision packet]
+    A[Business problem or AI capability] --> B[Find relevant tools and standards]
+    B --> C[Assess workflow readiness, evidence, and controls]
+    C --> D[Prepare alternatives and a decision packet]
     D --> E[Accountable human decision]
+    E --> F[Operate, monitor, learn, and revise]
 
     B --- R1[Awesome AI Production Readiness]
     C --- R2[Prototype-to-Production Toolkit]
     D --- R3[Research-to-Decision Toolkit]
 ```
 
-## What the repositories demonstrate
+## Operating method
 
-The code and documentation make several claims that are easy to check:
+The portfolio follows a repeatable sequence rather than a generic AI checklist.
 
-- **Workflow framing:** templates turn vague deployment ideas into explicit questions about owners, data, users, failure conditions, and rollback.
-- **Evaluation discipline:** the flagship CLI rejects custom denominators, missing dimensions, incomplete veto declarations, absent evidence, and malformed review metadata.
-- **Governance in delivery:** NIST and OWASP mappings, risk registers, system cards, and decision packets sit next to implementation artifacts rather than after them.
-- **Decision quality:** alternatives, criteria, stakeholders, reversibility, trade-offs, and pre-mortem failure are visible in the R2D packet.
-- **Engineering hygiene:** local tests, schemas, generated reports, complete licenses, changelogs, explicit security boundaries, and reproducible commands are part of each repository.
+1. **Bound the workflow.** Name the user, decision point, input sources, prohibited data, downstream action, operating owner, and rollback condition.
+2. **Create evidence.** Define evaluation cases, acceptance criteria, known failure modes, residual gaps, and the evidence that could change the conclusion.
+3. **Design controls.** Specify human review, access rights, logging, escalation, monitoring, cost ownership, and incident response.
+4. **Separate review from approval.** A score or validation result can make omissions visible. It cannot authenticate evidence, prove a reviewer is independent, or approve a deployment.
+5. **Keep a usable artifact.** The output should survive the original conversation: a decision memo, risk register, system card, evaluation plan, operating handover, or versioned tool.
 
-## How to review the work
+This sequence is useful in regulated and high-consequence settings, but it is intentionally portable. The tools do not assert legal applicability or replace sector-specific review.
 
-Start with a README, then run a local command. The repositories have no model API-key dependency and the public examples are fictional.
+## What a reviewer can inspect
 
-```bash
-# Example: run the flagship tool locally
-python -m pip install -e .
-ai-ready score examples/sample_assessment.json
-python -m unittest discover -s tests -v
-```
+The public repositories provide more than a framework description:
 
-Each README states what its CLI checks and what it cannot establish. A passing score is never described as production approval, source authentication, compliance certification, or a substitute for accountable review.
+- executable Python CLIs with no model API-key dependency;
+- fixed schemas and explicit input contracts;
+- unit tests for invalid input, veto conditions, missing evidence, reviewer metadata, and report generation;
+- generated Markdown reports from fictional cases;
+- NIST AI RMF and OWASP mappings with explicit scope limits;
+- complete licenses, changelogs, release notes, security boundaries, and reproducible commands;
+- a machine-readable resource catalog with duplicate checks and a release-time link report.
 
-## Boundaries
+For a detailed file-by-file review path, start with the flagship repository's [portfolio evidence map](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit/blob/main/docs/portfolio_evidence_map.md).
 
-- Public examples are fictional, synthetic, or built from public sources.
-- The repositories deliberately omit client, employer, personal, and confidential operating information.
-- A schema check proves that declared fields are present. It does not prove that an underlying source is true or that a named reviewer is independent.
-- The public portfolio is a set of methods and working artifacts, not a claim of deployed-client outcomes.
+## Releases and verification
 
-The GitHub handle is pseudonymous. That choice keeps public methods separate from employer and client information while preserving material that technical and governance reviewers can inspect directly.
+| Repository | Current public release | What the release makes explicit |
+|---|---|---|
+| Prototype-to-Production | [v0.5.0](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit/releases/tag/v0.5.0) | Canonical 70-point contract, evidence/reviewer/date declarations, veto handling, and migration boundary |
+| Awesome AI Production Readiness | [v0.3.1](https://github.com/Anonymousyz/awesome-ai-production-readiness/releases/tag/v0.3.1) | Catalog integrity, archived-resource policy, production workflow path, and link-verification result |
+| Research-to-Decision | [v0.5.0](https://github.com/Anonymousyz/research-to-decision-toolkit/releases/tag/v0.5.0) | Human decision-packet contract, decision-review area, typed source declarations, and migration boundary |
 
-## Current focus
+Each release documents a local verification command. Public examples are fictional or use public sources; a successful test run confirms code and declared structure, not a real-world outcome.
 
-- AI deployment workflows in regulated and high-consequence settings
-- Evaluation, rollback, human review, auditability, and operating ownership
+## Review boundaries
+
+The repositories do **not** claim:
+
+- that a passing score proves safety, compliance, security, fairness, or production approval;
+- that a source reference has been authenticated by the local CLI;
+- that a reviewer declaration proves a person's identity, independence, or authority;
+- that fictional examples demonstrate client deployment outcomes;
+- that a listed project in the Awesome catalog is endorsed or secure for every use case.
+
+These limits are part of the design. In AI deployment work, overstating evidence can be more damaging than documenting an unresolved gap.
+
+## Current professional focus
+
+- AI deployment workflows for regulated and high-consequence environments
+- Evaluation, human review, auditability, operating ownership, incident response, and rollback
 - AI governance translated into product, engineering, and decision artifacts
-- Research-to-decision methods for policy, consulting, and applied AI work
+- Evidence-backed research and decision design for policy, consulting, and applied AI work
 
-MIT or CC0 licensing applies to the linked repositories as stated in each project.
+Each linked repository states its own license and operating boundary.
