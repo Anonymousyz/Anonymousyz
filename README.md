@@ -14,9 +14,9 @@ The repositories use a pseudonymous public handle. They publish methods, fiction
 
 | Operating question | Public repository | Primary deliverables | Typical reviewer |
 |---|---|---|---|
-| Is an AI prototype structurally prepared for a bounded pilot or production decision? | [AI Prototype-to-Production Toolkit](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit) | Fixed 70-point local CLI, eight veto conditions, JSON schema, readiness checklist, system card, risk register, evaluation plan, pilot memo, and fictional cases | Product owner, FDE, solutions architect, security or risk lead |
-| Which tools and standards can close a known gap in evaluation, observability, guardrails, governance, or deployment? | [Awesome AI Production Readiness](https://github.com/Anonymousyz/awesome-ai-production-readiness) | Curated 57-resource catalog, curation rules, archived-resource handling, duplicate detection, and link verification | Architect, AI platform lead, governance practitioner, technical researcher |
-| How should readiness and research evidence become a decision packet for accountable humans? | [Research-to-Decision Toolkit](https://github.com/Anonymousyz/research-to-decision-toolkit) | Fixed 24-point structural check, decision-review module, evidence matrix, alternatives, pre-mortem, CLI, and fictional decision packet | Consultant, policy analyst, product leader, governance or investment committee member |
+| Is an AI prototype structurally prepared for a bounded pilot or production decision? | [AI Prototype-to-Production Toolkit](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit) | Current public v0.5.2: fixed 70-point local CLI, eight vetoes, governance artifacts, reports, and fictional cases. Local v0.6.0 candidate adds migration, static HTML, Promptfoo boundary, and a regulated synthetic case. | Product owner, FDE, solutions architect, security or risk lead |
+| Which tools and standards can close a known gap in evaluation, observability, guardrails, governance, or deployment? | [Awesome AI Production Readiness](https://github.com/Anonymousyz/awesome-ai-production-readiness) | Current public v0.3.3: curated 57-resource catalog, deterministic export, curation rules, and link evidence. Local v0.3.4 candidate adds schema 2.0 and strict canonical/archive metadata coverage. | Architect, AI platform lead, governance practitioner, technical researcher |
+| How should readiness and research evidence become a decision packet for accountable humans? | [Research-to-Decision Toolkit](https://github.com/Anonymousyz/research-to-decision-toolkit) | Current public v0.5.2: fixed 24-point structural check, decision review, evidence matrix, CLI, and fictional packet. Local v0.6.0 candidate adds unscored argument-quality and judgment-writing records. | Consultant, policy analyst, product leader, governance or investment committee member |
 
 ```mermaid
 flowchart LR
@@ -50,7 +50,7 @@ The public repositories provide more than a framework description:
 - executable Python CLIs with no model API-key dependency;
 - fixed schemas and explicit input contracts;
 - unit tests for invalid input, veto conditions, missing evidence, reviewer metadata, and report generation;
-- generated Markdown reports from fictional cases;
+- generated Markdown reports from fictional cases in current public releases, plus static HTML reporting in the local v0.6.0 Prototype-to-Production candidate;
 - NIST AI RMF and OWASP mappings with explicit scope limits;
 - complete licenses, changelogs, release notes, security boundaries, and reproducible commands;
 - a machine-readable resource catalog with duplicate checks and a release-time link report.
@@ -59,13 +59,23 @@ For a detailed file-by-file review path, start with the flagship repository's [p
 
 ## Releases and verification
 
-| Repository | Current public release | What the release makes explicit |
-|---|---|---|
-| Prototype-to-Production | [v0.5.2](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit/releases/tag/v0.5.2) | Canonical 70-point contract, evidence/reviewer/date declarations, veto handling, and citation metadata |
-| Awesome AI Production Readiness | [v0.3.3](https://github.com/Anonymousyz/awesome-ai-production-readiness/releases/tag/v0.3.3) | Catalog integrity, archived-resource policy, production workflow path, link verification, and contributor safety guidance |
-| Research-to-Decision | [v0.5.2](https://github.com/Anonymousyz/research-to-decision-toolkit/releases/tag/v0.5.2) | Human decision-packet contract, typed source declarations, decision-review area, and citation metadata |
+### Current public releases
 
-Each release documents a local verification command. Public examples are fictional or use public sources; a successful test run confirms code and declared structure, not a real-world outcome.
+| Repository | Current public release | Verified public boundary |
+|---|---|---|
+| Prototype-to-Production | [v0.5.2](https://github.com/Anonymousyz/ai-prototype-to-production-toolkit/releases/tag/v0.5.2) | Canonical 70-point assessment contract, governance artifacts, reports, and fictional examples |
+| Awesome AI Production Readiness | [v0.3.3](https://github.com/Anonymousyz/awesome-ai-production-readiness/releases/tag/v0.3.3) | Curated 57-resource catalog, deterministic export, curation policy, and link-check evidence |
+| Research-to-Decision | [v0.5.2](https://github.com/Anonymousyz/research-to-decision-toolkit/releases/tag/v0.5.2) | Canonical 24-point decision-packet contract, evidence matrix, decision review, and fictional packet |
+
+### Locally verified release candidates — not public releases
+
+| Repository | Candidate | Release blocker |
+|---|---|---|
+| Prototype-to-Production | v0.6.0 | Requires push, rebuilt tag, anonymous verification, and GitHub Release |
+| Awesome AI Production Readiness | v0.3.4 | Requires a rotated GitHub credential and a strict metadata run with zero unverified GitHub records before push/tag/release |
+| Research-to-Decision | v0.6.0 | Requires push, rebuilt tag, anonymous verification, and GitHub Release |
+
+The candidate versions above are not current public releases and their future tag URLs must not be treated as evidence until GitHub publishes them. Update this profile only after each release is independently visible. Each current release documents a local verification command. Public examples are fictional or use public sources; a successful test run confirms code and declared structure, not a real-world outcome.
 
 ## Review boundaries
 
